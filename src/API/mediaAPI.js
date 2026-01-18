@@ -49,7 +49,7 @@ export async function fetchVideos(query, page = 1, per_page = 15) {
                 per_page
             },
             headers: {
-                Authorization: `Client-Id ${PEXELS_KEY}`
+                Authorization: `Client-ID ${PEXELS_KEY}`
             }
         })
 
