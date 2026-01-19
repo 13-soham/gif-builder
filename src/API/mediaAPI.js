@@ -25,7 +25,7 @@ export async function fetchPhotos(query, page = 1, per_page = 20) {
     }
 }
 
-export async function fetchGIF(query, limit = 10) {
+export async function fetchGIF(query, limit = 12) {
   const res = await axios.get(
     "https://api.giphy.com/v1/gifs/search",
     {
@@ -40,7 +40,7 @@ export async function fetchGIF(query, limit = 10) {
   return res.data.data;
 }
 
-export async function fetchVideos(query, page = 1, per_page = 15) {
+export async function fetchVideos(query, page = 1, per_page = 16) {
     try {
         const res = await axios.get("https://api.pexels.com/videos/search", {
             params: {

@@ -5,7 +5,7 @@ import Tabs from "./Components/Tabs";
 
 const App = () => {
   return (
-    <div className='h-screen w-full bg-gray-800 text-white px-7 py-5'>
+    <div className='h-full w-full bg-gray-800 text-white px-7 py-5'>
       {/* <button onClick={async ()=>{
         let data = await fetchPhotos("cat");
         console.log(data.results);

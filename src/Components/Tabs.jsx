@@ -7,7 +7,7 @@ const Tabs = () => {
     const dispatch = useDispatch();
     const activetab = useSelector((state)=> state.search.activeTab);
   return (
-    <div className='flex items-center justify-center gap-5'>
+    <div className='flex items-center justify-center gap-5 gap-5 px-10 py-5 sticky top-[80px] bg-gray-800 z-40'>
         {arr.map((elem, idx)=>{
             return(
                 <button onClick={()=>{

@@ -17,10 +17,10 @@ const searchSlice = createSlice({
             state.activeTab = action.payload;
         },
         setResults(state, action){
-            state.loading = false;
+            state.loading = false;       // when result show, loading will be false
             state.results = action.payload;
         },
-        setLoading(state, action){
+        setLoading(state){
             state.loading = true;
             state.error = null;
         },

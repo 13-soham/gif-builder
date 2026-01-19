@@ -22,7 +22,7 @@ const Search = () => {
         setSearching("");
     }
     return (
-        <div className='px-10 py-5'>
+        <div className='px-10 py-5 sticky top-0 bg-gray-800 z-50'>
             <form onSubmit={(e) => {
                 handleSubmit(e)
             }} className='flex gap-3'>
