@@ -23,16 +23,16 @@ const Search = () => {
         setSearching("");
     }
     return (
-        <div className='px-10 py-5 sticky top-0 bg-gray-800 z-50 flex gap-2'>
+        <div className='px-10 py-5 sticky top-0 bg-gray-800 z-50 flex gap-2 flex-col sm:flex-col md:flex-row'>
             <form onSubmit={(e) => {
                 handleSubmit(e)
-            }} className='w-full flex gap-3'>
+            }} className='w-full flex gap-3 flex-col sm:flex-col md:flex-row'>
                 <input value={searching} required onChange={(e) => {
                     setSearching(e.target.value);
                 }} className='w-full px-3 py-2 text-xl bg-gray-900 outline-none border-2 rounded-md border-indigo-500 text-white' type="text" placeholder='search' />
-                <button className='px-5 py-3 bg-purple-900 text-white text-xl rounded-md cursor-pointer active:scale-95 transition duration-150'>Go</button>
+                <button className='px-5 py-3 bg-purple-900 text-white text-xl rounded-md cursor-pointer active:scale-95 transition duration-150 w-full md:w-auto'>Go</button>
             </form>
-            <NavLink to="/collection" className='px-5 py-3 bg-emerald-700 text-white text-xl rounded-md cursor-pointer active:scale-95 transition duration-150'>Collection</NavLink>
+            <NavLink to="/collection" className='px-5 py-3 bg-emerald-700 text-white text-xl rounded-md cursor-pointer active:scale-95 transition duration-150 w-full md:w-auto text-center'>Collection</NavLink>
         </div>
     )
 }

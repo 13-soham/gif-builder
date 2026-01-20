@@ -14,22 +14,12 @@ const collectionSlice = createSlice({
             state.items.push(action.payload);
             localStorage.setItem("collection", JSON.stringify(state.items));
 
-            // const alreadyExist = state.items.find((item) => {
-            //     return item.id === action.payload.id;
-            // });
-
-            // if (!alreadyExist) {
-            // }
-
         },
         removeCollection: (state, action) => {
-            console.log("remove");
-
+            
             state.items = state.items.filter((item) => {
                 return item.id !== action.payload.id;
             });
-
-            console.log(state.items);
 
             localStorage.setItem("collection", JSON.stringify(state.items));
         },
