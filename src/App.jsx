@@ -1,6 +1,7 @@
 import CollectionPage from "./Pages/CollectionPage";
 import HomePage from "./Pages/HomePage";
 import { Route, Routes } from "react-router-dom";
+import { ToastContainer } from "react-toastify"
 
 const App = () => {
   return (
@@ -9,6 +10,7 @@ const App = () => {
         <Route path="/" element={<HomePage />}/>
         <Route path="/collection" element={<CollectionPage/>}/>
       </Routes>
+      <ToastContainer/>
     </div>
   )
 }

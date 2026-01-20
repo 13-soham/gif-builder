@@ -1,8 +1,9 @@
-import { useEffect, useState } from 'react'
+import { useEffect } from 'react'
 import { useDispatch, useSelector } from 'react-redux';
 import { fetchGIF, fetchPhotos, fetchVideos } from '../API/mediaAPI';
 import { setResults, setLoading, setError } from '../Redux/features/searchSlice';
 import ResultCard from './ResultCard';
+import Loading from './Loading';
 
 const ResultGrid = () => {
     // Whenever query OR activeTab changes
@@ -76,14 +77,7 @@ const ResultGrid = () => {
 
 
     if (error) return <h1>Error</h1>
-    if (loading) return <h1>Loading...</h1>
-
-    // id: elem.id,
-    // type: "photo",
-    // title: elem.alt_description,
-    // thumbnail: elem.urls.small,
-    // src: elem.urls.full,
-    // url: elem.links.html
+    if (loading) return <Loading/>
 
     return (
         <div className='h-full w-full py-10 flex flex-wrap items-center justify-center gap-10 overflow-auto'>
