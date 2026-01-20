@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react'
 import { useDispatch, useSelector } from 'react-redux';
 import { fetchGIF, fetchPhotos, fetchVideos } from '../API/mediaAPI';
-import { setActiveTab, setResults, setLoading, setError } from '../Redux/features/searchSlice';
+import { setResults, setLoading, setError } from '../Redux/features/searchSlice';
 import ResultCard from './ResultCard';
 
 const ResultGrid = () => {
@@ -29,7 +29,7 @@ const ResultGrid = () => {
                         src: elem.urls.full,
                         url: elem.links.html
                     }));
-                    console.log(data);
+                    // console.log(data);
                 }
 
                 else if (activeTab === "videos") {
@@ -44,7 +44,7 @@ const ResultGrid = () => {
                         src: elem.video_files[0].link,
                         url: elem.url
                     }));
-                    console.log(data);
+                    // console.log(data);
                 }
 
                 else if (activeTab === "GIF") {
@@ -60,7 +60,7 @@ const ResultGrid = () => {
                         url: elem.url
                     }));
 
-                    console.log(data);
+                    // console.log(data);
                 }
 
                 dispatch(setResults(data));
