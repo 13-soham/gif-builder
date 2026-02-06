@@ -40,7 +40,7 @@ const CollectionPage = () => {
   }
 
   return (
-    <div className="min-h-screen w-full bg-gray-800 text-white px-10 py-6 flex flex-col px-4 sm:px-6 md:px-10">
+    <div className="min-h-screen w-full bg-gray-800 text-white px-10 py-6 flex flex-col sm:px-6 md:px-10">
 
       <div className="flex items-center gap-4 mb-8 flex-col sm:flex-col md:flex-row">
         <button
